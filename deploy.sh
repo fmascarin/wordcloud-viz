@@ -10,13 +10,12 @@ for file in "${FILES[@]}"; do
 done
 
 echo "Setting public read access..."
-# roles/storage.objectViewer is a bucket-level role and cannot be applied to
-# individual objects. Use roles/storage.legacyObjectReader for object-level IAM.
-for file in "${FILES[@]}"; do
-  gcloud storage objects add-iam-policy-binding "$BUCKET/$file" \
-    --member=allUsers \
-    --role=roles/storage.legacyObjectReader
-done
+# Grant allUsers objectViewer at the bucket level so all uploaded objects are
+# publicly readable. Object-level add-iam-policy-binding requires a gs:// URL
+# and cannot use local file paths.
+gcloud storage buckets add-iam-policy-binding "$BUCKET" \
+  --member=allUsers \
+  --role=roles/storage.objectViewer
 
 echo "Done. Files are publicly accessible at:"
 for file in "${FILES[@]}"; do
