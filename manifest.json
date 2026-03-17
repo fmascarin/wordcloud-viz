@@ -16,9 +16,9 @@
       "description": "Nuvem de palavras gerada a partir de texto de comentários",
       "iconUrl": "",
       "resource": {
-        "js": "https://fmascarin.github.io/wordcloud-viz/myViz.js",
-        "config": "https://fmascarin.github.io/wordcloud-viz/myViz.json",
-        "css": ""
+        "js": [
+          "https://fmascarin.github.io/wordcloud-viz/myViz.js"
+        ]
       }
     }
   ]
