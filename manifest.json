@@ -7,7 +7,7 @@
   "supportUrl": "",
   "privacyPolicyUrl": "",
   "termsOfServiceUrl": "",
-  "packageUrl": "",
+  "packageUrl": "https://storage.googleapis.com/artplan-wordcloud-1773759106/manifest.json",
   "devMode": true,
   "components": [
     {
