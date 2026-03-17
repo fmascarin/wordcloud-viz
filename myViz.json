@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "id": "commentSection",
+      "label": "Dados dos Comentários",
+      "elements": [
+        {
+          "id": "commentDimension",
+          "label": "Coluna de Comentários",
+          "type": "DIMENSION",
+          "options": { "min": 1, "max": 1 }
+        },
+        {
+          "id": "commentMetric",
+          "label": "Contagem (opcional)",
+          "type": "METRIC",
+          "options": { "min": 0, "max": 1 }
+        }
+      ]
+    }
+  ],
+  "style": [
+    {
+      "id": "wordCloudStyle",
+      "label": "Aparência",
+      "elements": [
+        {
+          "id": "maxWords",
+          "label": "Máximo de palavras",
+          "type": "SELECT_SINGLE",
+          "defaultValue": "80",
+          "options": [
+            {"label": "30", "value": "30"},
+            {"label": "50", "value": "50"},
+            {"label": "80", "value": "80"},
+            {"label": "120", "value": "120"},
+            {"label": "200", "value": "200"}
+          ]
+        },
+        {
+          "id": "minWordLength",
+          "label": "Tamanho mínimo da palavra",
+          "type": "SELECT_SINGLE",
+          "defaultValue": "3",
+          "options": [
+            {"label": "2 caracteres", "value": "2"},
+            {"label": "3 caracteres", "value": "3"},
+            {"label": "4 caracteres", "value": "4"},
+            {"label": "5 caracteres", "value": "5"}
+          ]
+        },
+        {
+          "id": "colorPalette",
+          "label": "Paleta de cores",
+          "type": "SELECT_SINGLE",
+          "defaultValue": "vale",
+          "options": [
+            {"label": "Vale (institucional)", "value": "vale"},
+            {"label": "Oceano", "value": "ocean"},
+            {"label": "Floresta", "value": "forest"},
+            {"label": "Monocromático", "value": "mono"},
+            {"label": "Vibrante", "value": "vibrant"}
+          ]
+        },
+        {
+          "id": "bgColor",
+          "label": "Cor de fundo",
+          "type": "FILL_COLOR",
+          "defaultValue": { "color": "#FFFFFF" }
+        },
+        {
+          "id": "fontFamily",
+          "label": "Fonte",
+          "type": "FONT_FAMILY",
+          "defaultValue": "Arial"
+        }
+      ]
+    },
+    {
+      "id": "stopwordsStyle",
+      "label": "Filtros de Texto",
+      "elements": [
+        {
+          "id": "language",
+          "label": "Idioma dos stopwords",
+          "type": "SELECT_SINGLE",
+          "defaultValue": "pt",
+          "options": [
+            {"label": "Português", "value": "pt"},
+            {"label": "Inglês", "value": "en"},
+            {"label": "Espanhol", "value": "es"},
+            {"label": "Nenhum", "value": "none"}
+          ]
+        },
+        {
+          "id": "customStopwords",
+          "label": "Palavras extras para ignorar (vírgula)",
+          "type": "TEXTINPUT",
+          "defaultValue": ""
+        }
+      ]
+    }
+  ],
+  "interactions": []
+}

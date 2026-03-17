@@ -1,0 +1,25 @@
+{
+  "name": "Word Cloud",
+  "organization": "Artplan Creative Data",
+  "description": "Nuvem de palavras a partir de comentários",
+  "logoUrl": "",
+  "organizationUrl": "",
+  "supportUrl": "",
+  "privacyPolicyUrl": "",
+  "termsOfServiceUrl": "",
+  "packageUrl": "",
+  "devMode": true,
+  "components": [
+    {
+      "id": "wordCloud",
+      "name": "Word Cloud",
+      "description": "Nuvem de palavras gerada a partir de texto de comentários",
+      "iconUrl": "",
+      "resource": {
+        "js": "https://fmascarin.github.io/wordcloud-viz/myViz.js",
+        "config": "https://fmascarin.github.io/wordcloud-viz/myViz.json",
+        "css": ""
+      }
+    }
+  ]
+}
